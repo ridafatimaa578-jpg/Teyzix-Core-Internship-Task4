@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Product - Home</title>
+    <!-- CSS File Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. HEADER / NAVIGATION BAR -->
+    <header class="navbar">
+        <div class="logo">SaaS<span>Core</span></div>
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#onboarding" class="btn-nav">Get Started</a>
+        </nav>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Automate Your Workflow With Smart Analytics</h1>
+            <p>Empower your team with a modern SaaS platform designed to eliminate confusion, optimize performance, and scale your business effortlessly.</p>
+            <div class="hero-buttons">
+                <a href="#onboarding" class="btn-primary">Start Free Trial</a>
+                <a href="#features" class="btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <!-- 3. FEATURES SECTION -->
+    <section id="features" class="features-section">
+        <div class="section-title">
+            <h2>Why Choose SaaS<span>Core</span>?</h2>
+            <p>Everything you need to manage your business operations and grow efficiently.</p>
+        </div>
+        
+        <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3>Real-Time Analytics</h3>
+                <p>Track your business growth with advanced charts and automated reporting tools updated instantly.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <h3>High Security</h3>
+                <p>Your data is protected with industrial-grade encryption standards keeping your information private.</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Fast Integration</h3>
+                <p>Connect your existing systems and tools within minutes without breaking a single line of code.</p>
+            </div>
+        </div>
+    </section>
+    <!-- 4. PRICING SECTION -->
+    <section id="pricing" class="pricing-section">
+        <div class="section-title">
+            <h2>Simple, Transparent Pricing</h2>
+            <p>Choose the plan that fits your business needs. No hidden fees.</p>
+        </div>
+        
+        <div class="pricing-grid">
+            <!-- Free Plan -->
+            <div class="price-card">
+                <h3>Starter</h3>
+                <div class="price">$0<span>/month</span></div>
+                <p class="price-desc">Perfect for small teams and testing features.</p>
+                <ul class="price-features">
+                    <li>✓ 1 User Only</li>
+                    <li>✓ 5 Projects Tracking</li>
+                    <li>✓ Basic Analytics Report</li>
+                    <li>✗ 24/7 Priority Support</li>
+                </ul>
+                <a href="#onboarding" class="btn-price-plan">Choose Starter</a>
+            </div>
+            
+            <!-- Pro Plan (Most Popular) -->
+            <div class="price-card popular">
+                <div class="badge">Most Popular</div>
+                <h3>Pro Business</h3>
+                <div class="price">$29<span>/month</span></div>
+                <p class="price-desc">Best for growing business and scaling teams.</p>
+                <ul class="price-features">
+                    <li>✓ Up to 10 Users</li>
+                    <li>✓ Unlimited Projects</li>
+                    <li>✓ Advanced Core Analytics</li>
+                    <li>✓ 24/7 Priority Support</li>
+                </ul>
+                <a href="#onboarding" class="btn-price-plan featured-btn">Choose Pro</a>
+            </div>
+        </div>
+    </section>
+    <!-- 5. CUSTOMER ONBOARDING PORTAL -->
+    <section id="onboarding" class="onboarding-section">
+        <div class="section-title">
+            <h2>Create Your Account</h2>
+            <p>Complete these quick steps to set up your workspace.</p>
+        </div>
+
+        <div class="onboarding-container">
+            <!-- Progress Indicator/Bar -->
+            <div class="progress-bar">
+                <div class="step active-step" id="step1-tab">1: Profile</div>
+                <div class="step" id="step2-tab">2: Company</div>
+                <div class="step" id="step3-tab">3: Security</div>
+            </div>
+
+            <!-- Multi-step Form -->
+            <form id="onboardingForm">
+                
+                <!-- Step 1: User Info -->
+                <div class="form-step step-active" id="step1">
+                    <h3>Personal Information</h3>
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <button type="button" class="btn-next" onclick="nextStep(1, 2)">Next Step</button>
+                </div>
+
+                <!-- Step 2: Company Details -->
+                <div class="form-step" id="step2">
+                    <h3>Company Details</h3>
+                    <div class="input-group">
+                        <label>Company Name</label>
+                        <input type="text" id="companyName" placeholder="Your company name">
+                    </div>
+                    <div class="input-group">
+                        <label>Company Size</label>
+                        <select id="companySize">
+                            <option value="1-10">1-10 employees</option>
+                            <option value="11-50">11-50 employees</option>
+                            <option value="51+">51+ employees</option>
+                        </select>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn-back" onclick="nextStep(2, 1)">Back</button>
+                        <button type="button" class="btn-next" onclick="nextStep(2, 3)">Next Step</button>
+                    </div>
+                </div>
+
+                <!-- Step 3: Security Setup -->
+                <div class="form-step" id="step3">
+                    <h3>Account Security</h3>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="Create a strong password" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="button" class="btn-back" onclick="nextStep(3, 2)">Back</button>
+                        <button type="submit" class="btn-submit">Complete Registration</button>
+                    </div>
+                </div>
+
+                <!-- Success State Page -->
+                <div class="form-step text-center" id="successPage">
+                    <div class="success-icon">🎉</div>
+                    <h3>Registration Successful!</h3>
+                    <p>Your workspace is ready. Welcome to SaaS<span>Core</span>.</p>
+                </div>
+
+            </form>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-title">
+            <h2>Trusted by Professionals</h2>
+            <p>See what our early users have to say about SaaSCore.</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"SaaSCore has completely transformed how our team manages projects. The real-time analytics are flawless."</p>
+                <h4>Sarah Jenkins</h4>
+                <span>Product Manager</span>
+            </div>
+            <div class="testimonial-card">
+                <p>"The onboarding experience was incredibly smooth. We integrated our system in under 10 minutes!"</p>
+                <h4>Alex Rivera</h4>
+                <span>Operations Lead</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <div class="section-title">
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">Is there a free trial available? <span>+</span></button>
+                <div class="faq-answer">
+                    <p>Yes, we offer a 14-day free trial for our Pro Business plan with full access to all features, no credit card required.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Can I cancel my subscription anytime? <span>+</span></button>
+                <div class="faq-answer">
+                    <p>Absolutely. You can cancel, upgrade, or downgrade your subscription plan at any time directly from your dashboard settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p>Have questions? We are here to help you scaling your operations.</p>
+        </div>
+        <div class="contact-container">
+            <form id="contactForm">
+                <div class="input-group">
+                    <label>Message</label>
+                    <textarea id="contactMessage" rows="4" placeholder="How can we help you?" required style="width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 6px; outline: none;"></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+    </section>
+<!-- 10. DASHBOARD PREVIEW SECTION -->
+    <section id="dashboard-preview" class="dashboard-section">
+        <div class="section-title">
+            <h2>Live Product Dashboard Preview</h2>
+            <p>Get a glance of our powerful workspace interface and tracking widgets.</p>
+        </div>
+
+        <div class="dashboard-mockup">
+            <!-- Sidebar Navigation Panel -->
+            <div class="db-sidebar">
+                <div class="db-user-profile">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-info">
+                        <h4>Demo User</h4>
+                        <p>Standard Account</p>
+                    </div>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="active-menu">📊 Overview</li>
+                    <li>📈 Analytics</li>
+                    <li>⚙️ Settings</li>
+                </ul>
+            </div>
+
+            <!-- Main Dashboard Panel Content -->
+            <div class="db-main">
+                <!-- Analytics Cards Container -->
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <h5>Total Revenue</h5>
+                        <div class="card-value">$14,240</div>
+                        <span class="trend-up">▲ +12% this week</span>
+                    </div>
+                    <div class="analytics-card">
+                        <h5>Active Workspaces</h5>
+                        <div class="card-value">18</div>
+                        <span class="trend-up">▲ +4% this week</span>
+                    </div>
+                    <div class="analytics-card">
+                        <h5>Server Uptime</h5>
+                        <div class="card-value">99.98%</div>
+                        <span class="trend-stable">● Optimal</span>
+                    </div>
+                </div>
+
+                <!-- Recent Activity Feed Box -->
+                <div class="activity-box">
+                    <h4>Recent Workspace Activity</h4>
+                    <ul class="activity-list">
+                        <li>
+                            <span class="activity-time">Just Now</span>
+                            <p><strong>System</strong>: Automated weekly report generated successfully.</p>
+                        </li>
+                        <li>
+                            <span class="activity-time">20 mins ago</span>
+                            <p><strong>Webhook</strong>: Payment integration test executed from API key.</p>
+                        </li>
+                        <li>
+                            <span class="activity-time">2 hours ago</span>
+                            <p><strong>Profile</strong>: Security tokens rotated for standard session.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>&copy; 2026 SaaS<span>Core</span>. All rights reserved. Built for TEYZIX CORE Internship.</p>
+    </footer>
+
+    <!-- JavaScript File Link -->
+    <script src="script.js"></script>
+</body>
+</html>
